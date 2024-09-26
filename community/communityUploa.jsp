@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -56,7 +55,7 @@
         .search-box {
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .search-box input {
@@ -66,140 +65,81 @@
             border-radius: 20px;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+        .form-group {
+            margin-bottom: 20px;
         }
 
-        .card {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .card .user {
-            margin: 10px 0;
-            font-size: 14px;
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
             font-weight: bold;
         }
 
-        .post-box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .post-box h2 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .post-box input[type="text"], 
-        .post-box textarea {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 5px;
         }
 
-        .post-box .image-upload {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
+        .form-group textarea {
+            height: 150px;
+            resize: none;
         }
 
-        .post-box .image-upload div {
-            width: 60px;
-            height: 60px;
-            background-color: #f2f2f2;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            cursor: pointer;
-        }
-
-        .post-box .location {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .post-box .location input {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .post-box .tags {
-            margin-bottom: 10px;
-            font-size: 12px;
-            color: #555;
-        }
-
-        .post-box button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
+        .submit-btn {
+            background-color: #5cb85c;
             color: white;
             border: none;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
         }
 
-        .post-box button:hover {
-            background-color: #0056b3;
+        .submit-btn:hover {
+            background-color: #4cae4c;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>게시물 작성할 때</h1>
-
-    <!-- 게시물 작성 창 -->
-    <div class="post-box">
-        <h2>내 게시물</h2>
-        <input type="text" placeholder="제목을 입력하세요." required>
-        <textarea placeholder="내용을 입력하세요." rows="4" required></textarea>
-        
-        <div class="image-upload">
-            <div>사진 추가</div>
-            <div>+</div>
-            <div>+</div>
-            <div>+</div>
-        </div>
-        
-        <div class="location">
-            <input type="text" placeholder="위치 추가">
-            <div style="width: 100px; height: 60px; background-color: #e9e9e9; margin-left: 10px;">지도</div>
+    <div class="container">
+        <div class="header">
+            <img src="떠나자logo.png" alt="Logo">
+            <nav>
+                <a href="#home">홈</a>
+                <a href="#about">소개</a>
+                <a href="#contact">연락처</a>
+            </nav>
         </div>
 
-        <div class="tags">#김포공항 #김포카페</div>
-        
-        <button>게시하기</button>
+        <h1>게시물 작성</h1>
+
+        <div class="search-box">
+            <input type="text" placeholder="검색...">
+        </div>
+
+        <form action="submitPost.jsp" method="post">
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea id="content" name="content" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">작성하기</button>
+        </form>
+
+
     </div>
-</div>
-
 </body>
 </html>

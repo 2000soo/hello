@@ -1,9 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커뮤니티 페이지</title>
+    <title>커뮤니티</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/login/login.css">
     
     <style>
@@ -75,178 +76,143 @@
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 10px;
-            padding: 10px;
-            text-align: center;
-            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
         }
 
         .card img {
             width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
+            height: auto;
         }
 
-        .card .user {
-            margin: 10px 0;
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .card-content p {
             font-size: 14px;
-            font-weight: bold;
+            color: #666;
         }
 
-        .card .location {
-            background-color: #ddd;
-            border-radius: 20px;
-            padding: 5px 10px;
-            display: inline-block;
-            font-size: 12px;
-            margin-bottom: 5px;
-        }
-
-        .card .icons {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .card .icons .icon {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .card .icons img {
-            width: 16px;
-            height: 16px;
-        }
-
-        .tags {
+        .footer {
             text-align: center;
-            margin-top: 10px;
-            font-size: 12px;
-            color: #007bff;
-        }
-
-        .sidebar {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .sidebar h3 {
-            margin-bottom: 10px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .sidebar ul li img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
             margin-top: 20px;
-        }
-
-        .pagination a {
-            text-decoration: none;
-            color: #007bff;
-            margin: 0 5px;
-            font-size: 16px;
-        }
-
-        .pagination a.active {
-            font-weight: bold;
-            color: black;
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <img src="떠나자logo.png" alt="Logo">
+            <nav>
+                <a href="#home">홈</a>
+            </nav>
+        </div>
 
-<div class="container">
-    <h1>커뮤니티 페이지</h1>
-    
-    <!-- 헤더 -->
-    <div class="header">
-        <img src="떠나자logo.png" alt="떠나가 로고">
-        <nav>
-            <a href="#">인기순</a>
-            <a href="#">최신순</a>
-        </nav>
-    </div>
-    
-    <!-- 검색창 -->
-    <div class="search-box">
-        <input type="text" placeholder="지역명을 검색하세요">
-    </div>
-    
-    <!-- 콘텐츠 그리드 -->
-    <div class="gallery">
-        <!-- 카드 1 -->
-        <div class="card">
-            <img src="image-placeholder.png" alt="이미지">
-            <div class="user">User_ID</div>
-            <div class="location">서울</div>
-            <div class="icons">
-                <div class="icon">
-                    <img src="heart-icon.png" alt="좋아요 아이콘">4
-                </div>
-                <div class="icon">
-                    <img src="comment-icon.png" alt="댓글 아이콘">11
+        <h1>커뮤니티</h1>
+
+        <div class="search-box">
+            <input type="text" placeholder="검색">
+        </div>
+
+        <div class="gallery">
+            <div class="card">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="card-content">
+                    <h2>제목 1</h2>
+                    <p>설명 내용 1</p>
                 </div>
             </div>
-            <div class="tags">#한밭수목원</div>
-        </div>
-        <!-- 추가 카드들 -->
-        <div class="card">
-            <img src="image-placeholder.png" alt="이미지">
-            <div class="user">User_ID</div>
-            <div class="location">대전</div>
-            <div class="icons">
-                <div class="icon">
-                    <img src="heart-icon.png" alt="좋아요 아이콘">2
-                </div>
-                <div class="icon">
-                    <img src="comment-icon.png" alt="댓글 아이콘">7
+            <div class="card">
+                <img src="image2.jpg" alt="Image 2">
+                <div class="card-content">
+                    <h2>제목 2</h2>
+                    <p>설명 내용 2</p>
                 </div>
             </div>
-            <div class="tags">#토끼의 숲</div>
+            <div class="card">
+                <img src="image3.jpg" alt="Image 3">
+                <div class="card-content">
+                    <h2>제목 3</h2>
+                    <p>설명 내용 3</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 4</h2>
+                    <p>설명 내용 4</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 5</h2>
+                    <p>설명 내용 5</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 6</h2>
+                    <p>설명 내용 6</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 7</h2>
+                    <p>설명 내용 7</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 8</h2>
+                    <p>설명 내용 8</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 9</h2>
+                    <p>설명 내용 9</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 10</h2>
+                    <p>설명 내용 10</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 11</h2>
+                    <p>설명 내용 11</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="card-content">
+                    <h2>제목 12</h2>
+                    <p>설명 내용 12</p>
+                </div>
+            </div>
         </div>
-        <!-- 더 많은 카드들 추가 -->
-    </div>
 
-    <!-- 사이드바 -->
-    <div class="sidebar">
-        <h3>인기 장소</h3>
-        <ul>
-            <li><img src="place-icon.png" alt="장소 아이콘">#도끼의 숲</li>
-            <li><img src="place-icon.png" alt="장소 아이콘">#한밭수목원</li>
-            <li><img src="place-icon.png" alt="장소 아이콘">#온양민속박물관</li>
-            <!-- 더 많은 항목들 -->
-        </ul>
     </div>
-
-    <!-- 페이지네이션 -->
-    <div class="pagination">
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-    </div>
-</div>
-
 </body>
 </html>

@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding: 100;
         }
 
         .container {
@@ -34,7 +34,7 @@
 
         .post-box {
             position: absolute;
-            top: 50%;
+            top: 400%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 400px;
@@ -138,7 +138,8 @@
         }
 
         .post-box .add-comment button {
-            padding: 5px 10px;
+        
+            padding: 1px 30px;
             background-color: #007bff;
             color: white;
             border: none;
@@ -169,10 +170,10 @@
         <!-- 유저 정보 및 위치 -->
         <div class="user-info">
             <div>
-                <img src="user-avatar.png" alt="User Avatar">
+                <img src="떠나자logo.png" alt="User Avatar">
                 <span>User_ID</span>
             </div>
-            <span class="user-location">Gimpo Airport</span>
+            <span class="user-location">김포공항</span>
         </div>
 
         <!-- 게시물 이미지 -->
@@ -180,37 +181,36 @@
 
         <!-- 좋아요 및 댓글 수 -->
         <div class="actions">
-            <span class="like-comment">Likes 2 · Comments 4</span>
+            <span class="like-comment">좋아요 2 · 댓글 4</span>
             <span class="date">2024-09-12</span>
         </div>
 
         <!-- 게시물 내용 -->
         <div class="post-content">
-            I had a great meal at Gimpo Airport. Make sure to visit if you are in the area!
+            공항 근처 김포빵집 들렸는데 너무 맛있네요. 지나갈 일 있으시면 꼭 방문해보세요^^
         </div>
 
         <!-- 해시태그 -->
         <div class="hashtags">
-            #GimpoAirport #Cafe #Travel #Review
-        </div>
+		#김포공항 #김포카페 #여행 #비행기</div>
 
         <!-- 댓글 섹션 -->
         <div class="comments-section">
             <div class="comment">
-                <span class="user-comment">mini: I want to travel!</span>
+                <span class="user-comment">mini 여행 떠나고 싶다~!!</span>
                 <span class="date">2024-09-12</span>
             </div>
             <div class="comment">
-                <span class="user-comment">happy: The clouds are so beautiful!</span>
+                <span class="user-comment">happy 구름이 너무 예뻐요 >_< </span>
                 <span class="date">2024-09-12</span>
             </div>
-            <div class="view-more">View more comments (2)</div>
+            <div class="view-more">댓글 더보기(2)</div>
         </div>
 
         <!-- 댓글 입력 -->
         <div class="add-comment">
-            <input type="text" placeholder="Add a comment...">
-            <button>Post</button>
+            <input type="text" placeholder="댓글">
+            <button>게시</button>
         </div>
     </div>
 </div>
