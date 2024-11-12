@@ -1,3 +1,5 @@
+
+ 
 ![header](https://capsule-render.vercel.app/api?type=waving&color=9BB7FF&text=&animation=twinkling&height=80)
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Alkatra&weight=500&size=45&duration=4000&pause=3&color=9BB7FF&center=false&vCenter=false&multiline=true&repeat=true&width=1000&height=100&lines=Welcome+to+seonho's+GitHub!👋)](https://git.io/typing-svg)
@@ -58,9 +60,3 @@
 
 
 
-<strong><h3> 🏫 University 🏫 </h3></strong>
-
-Catholic University of Korea <br /> 
-📖 <em>Media Technology Contents &nbsp;   MAR  2021 - now </em><br /> 
-📖 <em>Computer Science Information Engineering &nbsp;   MAR  2021 - now </em>
-<br /> <br />
